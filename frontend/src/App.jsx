@@ -14,10 +14,7 @@ const App = () => {
       <Route path="/Success" element={<Success />} />
       <Route path="/Cancel" element={<Cancel />} />
 
-      {/* <Route path="/success" element={<success />}/> */}
-        {/* <Route path="/"  element={<home/>} />
-        <Route path="/success" element={<success/>} />
-        <Route path="/cancel" element={<cancel/>} /> */}
+
       </Routes>
     </div>
   );

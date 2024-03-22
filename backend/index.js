@@ -8,7 +8,7 @@ const stripe = require("stripe")(process.env.SECRET_STRIPE_KEY)
 
 
 app.use(express.json())
-app.use(cors({origin:"http://localhost:5174"}));
+app.use(cors({origin:"http://localhost:5173"}));
 
 app.post("/checkout",async(req,res)=>{
     try {
@@ -27,8 +27,8 @@ app.post("/checkout",async(req,res)=>{
                     quantity:item.quantity
                 }
             }),
-            success_url:"http://localhost:5174/success",
-            cancel_url:"http://localhost:5174/cancel",
+            success_url:"http://localhost:5173/success",
+            cancel_url:"http://localhost:5173/cancel",
         })
 
         res.json({url:session.url})
